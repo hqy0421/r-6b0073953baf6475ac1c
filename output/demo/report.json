@@ -1,0 +1,88 @@
+{
+  "model": {
+    "n_rows": 24,
+    "n_features": 9,
+    "feature_names": [
+      "intercept",
+      "employees",
+      "assets",
+      "industry_物流",
+      "industry_科技",
+      "industry_零售",
+      "region_华北",
+      "region_华南",
+      "year_2024"
+    ],
+    "n_equality_observations": 44,
+    "n_interval_observations": 7,
+    "map_sigma": [
+      406.61052009937964,
+      344.47996569970195
+    ],
+    "map_rho": 0.9966823978396513
+  },
+  "mcmc": {
+    "n_chains": 4,
+    "n_draws_per_chain": 250,
+    "burn_in": 1000,
+    "thin": 4,
+    "acceptance_rates": [
+      0.224,
+      0.238,
+      0.246,
+      0.158
+    ],
+    "final_step_sizes": [
+      4.19902694816833,
+      3.876190414772173,
+      3.9544946553494382,
+      4.801137262030044
+    ],
+    "split_rhat_mean_revenue": 2.420162165503199e-06,
+    "split_rhat_mean_cost": 5.737087417868496e-06,
+    "split_rhat_first_row_r": 2.3590018827235326e-06,
+    "split_rhat_first_row_c": 3.970348780763719e-07,
+    "max_split_rhat": 5.737087417868496e-06,
+    "learned_rho": 0.9966823978396513,
+    "verification": {
+      "all_constraints_satisfied": true,
+      "max_equality_residual": 1.000444171950221e-11,
+      "interval_violations": 0,
+      "negative_values": 0,
+      "n_draws": 1000
+    }
+  },
+  "rho_posterior": {
+    "mean": 0.8796615689114756,
+    "sd": 0.08380536886504826,
+    "q05": 0.706896248203067,
+    "q95": 0.9718571284907667
+  },
+  "rubin_pooling": {
+    "grand_mean_revenue": {
+      "estimate": 541.5070833333328,
+      "within_variance": 322.74651527193595,
+      "between_variance": 0.0,
+      "total_variance": 322.74651527193595,
+      "fraction_missing_info": 0.0,
+      "df": null,
+      "n_imputations": 4.0
+    },
+    "grand_mean_cost": {
+      "estimate": 436.9366666666662,
+      "within_variance": 225.20899290555235,
+      "between_variance": 0.0,
+      "total_variance": 225.20899290555235,
+      "fraction_missing_info": 0.0,
+      "df": null,
+      "n_imputations": 4.0
+    }
+  },
+  "rubin_note": "Each MCMC chain is treated as one independent imputation and Rubin's rules are applied across chains.  The grand-mean between-imputation variance can be exactly zero because the published regional totals fix every group sum; per-cell between variance and fraction of missing information are in rubin_per_cell.csv, where free (unpinned) imputed cells retain positive between-imputation uncertainty.",
+  "outputs": {
+    "draws": "/workspace/output/demo/imputed_draws_long.csv",
+    "summary": "/workspace/output/demo/imputed_summary.csv",
+    "rubin_per_cell": "/workspace/output/demo/rubin_per_cell.csv",
+    "posterior_means": "/workspace/output/demo/completed_posterior_means.csv"
+  }
+}
